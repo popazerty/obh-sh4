@@ -1,6 +1,3 @@
-noinst_LIBRARIES += gdi/libenigma_gdi.a
-
-gdi_libenigma_gdi_CXXFLAGS = $(LIBSDL_CFLAGS)
 
 gdi_libenigma_gdi_a_SOURCES = \
 	gdi/accel.cpp \
@@ -9,7 +6,6 @@ gdi_libenigma_gdi_a_SOURCES = \
 	gdi/epng.cpp \
 	gdi/erect.cpp \
 	gdi/fb.cpp \
-	gdi/fblcd.cpp \
 	gdi/font.cpp \
 	gdi/font_arabic.cpp \
 	gdi/gfont.cpp \
@@ -20,12 +16,8 @@ gdi_libenigma_gdi_a_SOURCES = \
 	gdi/lcd.cpp \
 	gdi/picexif.cpp \
 	gdi/picload.cpp \
-	gdi/region.cpp
-	
-if ENABLE_SH
-gdi_libenigma_gdi_a_SOURCES += \
-        gdi/stmfb.cpp
-endif        
+	gdi/region.cpp \
+	gdi/stmfb.cpp
 
 gdiincludedir = $(pkgincludedir)/lib/gdi
 gdiinclude_HEADERS = \
@@ -36,7 +28,6 @@ gdiinclude_HEADERS = \
 	gdi/erect.h \
 	gdi/esize.h \
 	gdi/fb.h \
-	gdi/fblcd.h \
 	gdi/font.h \
 	gdi/gfont.h \
 	gdi/glcddc.h \
